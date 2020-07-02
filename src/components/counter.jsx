@@ -25,16 +25,21 @@ class Counter extends Component {
     margin: 5
   }
 
-  render() {    
+  renderTags() {
+    if (this.state.tags.length === 0) {
+      return <p>There are no Tags!</p>
+    } else {
+      return <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+    }
+  }
 
+  render() {
     return (  
       <div>
         {/* <img src={this.state.imageUrl} style={this.myStyle} alt="" /> */}
         <span className={this.getCounterClassName()}>{this.formatCounter()}</span>
         <button className="btn btn-secondary btn-sm">Increment</button>
-        <ul>
-          {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
-        </ul>
+        {this.renderTags()}
       </div>        
     )
   }
