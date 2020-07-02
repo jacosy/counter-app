@@ -44,8 +44,8 @@ class Counter extends Component {
     )
   }
 
-  handleIncrement() {
-    console.log('Increment Clicked!!!')
+  handleIncrement = () => {
+    console.log(this)
   }
 }
 
