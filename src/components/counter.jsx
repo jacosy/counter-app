@@ -38,10 +38,14 @@ class Counter extends Component {
       <div>
         {/* <img src={this.state.imageUrl} style={this.myStyle} alt="" /> */}
         <span className={this.getCounterClassName()}>{this.formatCounter()}</span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
-        {this.renderTags()}
+        <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
+        {/* {this.renderTags()} */}
       </div>        
     )
+  }
+
+  handleIncrement() {
+    console.log('Increment Clicked!!!')
   }
 }
 
