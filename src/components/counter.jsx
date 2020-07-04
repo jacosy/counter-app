@@ -2,20 +2,20 @@ import React, { Component } from 'react'
 
 class Counter extends Component {
   state = {
-    counter: 0,
+    value: this.props.value,
     tags: ['tag1', 'tag2','tag3'],
     imageUrl: 'https://picsum.photos/200'
   }
 
   formatCounter() {
-    const { counter } = this.state
-    return counter === 0 ? 'Zero' : counter
+    const { value } = this.state
+    return value === 0 ? 'Zero' : value
   }
 
   // Ctrl + Alt + R --> Refactor Code
   getCounterClassName() {
     let badgeClass = 'badge m-2 '
-    badgeClass += this.state.counter === 0 ? 'badge-warning' : 'badge-primary'
+    badgeClass += this.state.value === 0 ? 'badge-warning' : 'badge-primary'
     return badgeClass
   }
 
@@ -45,7 +45,7 @@ class Counter extends Component {
   }
 
   handleIncrement = () => {
-    this.setState({ counter: this.state.counter + 1 })
+    this.setState({ value: this.state.value + 1 })
   }
 }
 
