@@ -36,6 +36,7 @@ class Counter extends Component {
   render() {
     return (  
       <div>
+        {this.props.children}
         {/* <img src={this.state.imageUrl} style={this.myStyle} alt="" /> */}
         <span className={this.getCounterClassName()}>{this.formatCounter()}</span>
         <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
