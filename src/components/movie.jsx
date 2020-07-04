@@ -20,7 +20,7 @@ class Movie extends Component {
           <td>{m.genre.name}</td>
           <td>{m.numberInStock}</td>
           <td>{m.dailyRentalRate}</td>
-          <td><button onClick={() => this.deleteHandler(m._id)} className="btn btn-danger btn-lg">Delete</button></td>
+          <td><button onClick={() => this.deleteHandler(m._id)} className="btn btn-danger btn-sm">Delete</button></td>
         </tr>
       )
     })
@@ -30,7 +30,7 @@ class Movie extends Component {
     return (
       <div>
         <p>Showing {this.state.movies.length} movies in the DB</p>
-        <table>
+        <table className="table">
           <thead>
             <tr>          
               <th>Title</th>
