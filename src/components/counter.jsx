@@ -36,10 +36,11 @@ class Counter extends Component {
   render() {
     return (  
       <div>
-        {this.props.children}
+        {/* {this.props.children} */}
         {/* <img src={this.state.imageUrl} style={this.myStyle} alt="" /> */}
         <span className={this.getCounterClassName()}>{this.formatCounter()}</span>
         <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
+        <button onClick={this.props.onDelete} className="btn btn-danger btn-sm m-2">Delete</button>
         {/* {this.renderTags()} */}
       </div>        
     )
